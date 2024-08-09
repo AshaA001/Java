@@ -1,18 +1,18 @@
-package collections.arrays.integer;
+package collections.arrays.string;
 
-public class insertion_first {
+public class Insertion_first {
     public static void main(String[] args){
-        int[] arr = new int[10];
-        arr[0] = 10;
-        arr[1] = 16;
-        arr[2] = 22;
-        arr[3] = 13;
-        arr[4] = 44;
-        arr[5] = 15;
+        String[] arr = new String[10];
+        arr[0] = "abc";
+        arr[1] = "def";
+        arr[2] = "ghi";
+        arr[3] = "jkl";
+        arr[4] = "mno";
+        arr[5] = "qrs";
 
         int n =6;
         int capacity = arr.length;
-        int key = 50;
+        String key = "xyz";
         int pos = 0;
 
         System.out.println("Before insertion: ");
@@ -30,7 +30,7 @@ public class insertion_first {
         }
     }
 
-    private static int insertFirst(int[] arr, int n, int key, int pos) {
+    private static int insertFirst(String[] arr, int n, String key, int pos) {
         for(int i = n-1; i>=pos; i--){
             arr[i+1] = arr[i];
         }

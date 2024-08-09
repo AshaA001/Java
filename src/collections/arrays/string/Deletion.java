@@ -1,6 +1,6 @@
 package collections.arrays.string;
 
-public class deletion {
+public class Deletion {
     public static void main(String[] args){
         String[] arr = new String[10];
         arr[0] = "abc";

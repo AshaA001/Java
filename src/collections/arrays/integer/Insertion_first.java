@@ -1,6 +1,6 @@
 package collections.arrays.integer;
 
-public class insertion_last {
+public class Insertion_first {
     public static void main(String[] args){
         int[] arr = new int[10];
         arr[0] = 10;
@@ -13,6 +13,7 @@ public class insertion_last {
         int n =6;
         int capacity = arr.length;
         int key = 50;
+        int pos = 0;
 
         System.out.println("Before insertion: ");
 
@@ -20,7 +21,7 @@ public class insertion_last {
             System.out.println(arr[i] + " ");
         }
 
-        n = insertLast(arr, n, key, capacity);
+        n = insertFirst(arr, n, key, pos);
 
         System.out.println("After insertion: ");
 
@@ -29,13 +30,11 @@ public class insertion_last {
         }
     }
 
-    private static int insertLast(int[] arr, int n, int key, int capacity) {
-        if(n>=capacity){
-            return n;
+    private static int insertFirst(int[] arr, int n, int key, int pos) {
+        for(int i = n-1; i>=pos; i--){
+            arr[i+1] = arr[i];
         }
-        arr[n] = key;
+        arr[pos] = key;
         return n+1;
     }
-
-
 }

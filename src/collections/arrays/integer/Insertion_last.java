@@ -1,18 +1,18 @@
-package collections.arrays.string;
+package collections.arrays.integer;
 
-public class insertion_last {
+public class Insertion_last {
     public static void main(String[] args){
-        String[] arr = new String[10];
-        arr[0] = "abc";
-        arr[1] = "def";
-        arr[2] = "ghi";
-        arr[3] = "jkl";
-        arr[4] = "mno";
-        arr[5] = "qrs";
+        int[] arr = new int[10];
+        arr[0] = 10;
+        arr[1] = 16;
+        arr[2] = 22;
+        arr[3] = 13;
+        arr[4] = 44;
+        arr[5] = 15;
 
         int n =6;
         int capacity = arr.length;
-        String key = "xyz";
+        int key = 50;
 
         System.out.println("Before insertion: ");
 
@@ -29,7 +29,7 @@ public class insertion_last {
         }
     }
 
-    private static int insertLast(String[] arr, int n, String key, int capacity) {
+    private static int insertLast(int[] arr, int n, int key, int capacity) {
         if(n>=capacity){
             return n;
         }

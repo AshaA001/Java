@@ -1,6 +1,6 @@
 package collections.arrays.integer;
 
-public class deletion {
+public class Deletion {
     public static void main(String[] args){
         int[] arr = new int[10];
         arr[0] = 10;

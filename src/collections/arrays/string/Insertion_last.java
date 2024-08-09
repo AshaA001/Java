@@ -1,6 +1,6 @@
 package collections.arrays.string;
 
-public class insertion_first {
+public class Insertion_last {
     public static void main(String[] args){
         String[] arr = new String[10];
         arr[0] = "abc";
@@ -13,7 +13,6 @@ public class insertion_first {
         int n =6;
         int capacity = arr.length;
         String key = "xyz";
-        int pos = 0;
 
         System.out.println("Before insertion: ");
 
@@ -21,7 +20,7 @@ public class insertion_first {
             System.out.println(arr[i] + " ");
         }
 
-        n = insertFirst(arr, n, key, pos);
+        n = insertLast(arr, n, key, capacity);
 
         System.out.println("After insertion: ");
 
@@ -30,11 +29,13 @@ public class insertion_first {
         }
     }
 
-    private static int insertFirst(String[] arr, int n, String key, int pos) {
-        for(int i = n-1; i>=pos; i--){
-            arr[i+1] = arr[i];
+    private static int insertLast(String[] arr, int n, String key, int capacity) {
+        if(n>=capacity){
+            return n;
         }
-        arr[pos] = key;
+        arr[n] = key;
         return n+1;
     }
+
+
 }

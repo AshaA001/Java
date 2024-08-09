@@ -1,17 +1,17 @@
-package collections.arrays.string;
+package collections.arrays.integer;
 
-public class search {
+public class Search {
     public static void main(String[] args){
-        String[] arr = new String[10];
-        arr[0] = "abc";
-        arr[1] = "def";
-        arr[2] = "ghi";
-        arr[3] = "jkl";
-        arr[4] = "mno";
-        arr[5] = "qrs";
+        int[] arr = new int[10];
+        arr[0] = 10;
+        arr[1] = 16;
+        arr[2] = 22;
+        arr[3] = 13;
+        arr[4] = 44;
+        arr[5] = 15;
 
         int n =6;
-        String key = "def";
+        int key = 44;
 
         int pos = search(arr,n,key);
         if(pos==-1){
@@ -22,9 +22,9 @@ public class search {
         }
     }
 
-    private static int search(String[] arr, int n, String key) {
+    private static int search(int[] arr, int n, int key) {
         for(int i =0; i<n; i++){
-            if(arr[i].equals(key)){
+            if(arr[i] == key){
                 return i;
             }
         }

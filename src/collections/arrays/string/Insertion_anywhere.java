@@ -1,6 +1,6 @@
 package collections.arrays.string;
 
-public class insertion_anywhere {
+public class Insertion_anywhere {
     public static void main(String[] args){
         String[] arr = new String[10];
         arr[0] = "abc";
