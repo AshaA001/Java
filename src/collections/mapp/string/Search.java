@@ -13,14 +13,28 @@ public class Search {
         map.put("four", "forty");
         map.put("five", "fifty");
 
-        Object key;
-        Object value;
+        int value=search("forty",map);
 
-        for(Map.Entry<String,String> entry: map.entrySet()){
-            key = entry.getKey();
-            value = entry.getValue();
-
-            System.out.println("Element found at key: " + key);
+        if(value==-1){
+            System.out.println("Element not found");
         }
+        else{
+            System.out.println("Element " +"forty" + " found");
+        }
+
     }
+
+    private static int search(String element, Map<String, String> m) {
+        for(Map.Entry<String,String> entry: m.entrySet()){
+            Object key = entry.getKey();
+            Object value = entry.getValue();
+
+            if(value.equals("forty")){
+                return 0;
+            }
+        }
+
+        return -1;
+    }
+
 }
